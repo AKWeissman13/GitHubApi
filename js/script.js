@@ -19,11 +19,13 @@ btn.onclick = (event) => {
 search.onkeypress = (event) => {
   if (event.keyCode == 13) {
     event.preventDefault();
+    
     if (search.value.length < 256 && (search.value == "" || search.value.length > 2)) {
       getRepos();
       
     } else {
       search.style.border = "5px solid red";
+      event.target.blur();
     }
   }
 };
