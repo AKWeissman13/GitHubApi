@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.0362694301vw;
+  background-color: #fc5185;
+}
+
+.form {
+  width: 100%;
+  height: 60vh;
+  background-color: #364f6b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__title {
+  color: #3fc1c9;
+  font-size: 4.5336787565vw;
+  margin-bottom: 2.5906735751vw;
+}
+.form__search-container {
+  display: flex;
+  align-items: center;
+}
+.form__search {
+  box-sizing: border-box;
+  width: 25.9067357513vw;
+  height: 2.5906735751vw;
+  font-size: 1.2953367876vw;
+  padding-left: 1.9430051813vw;
+  border: none;
+  outline: none;
+  background-color: #f5f5f5;
+}
+.form__btn {
+  box-sizing: border-box;
+  height: 2.5906735751vw;
+  border: none;
+  outline: none;
+  padding: 0 1.2953367876vw;
+  font-size: 1.0362694301vw;
+  background-color: #fc5185;
+  color: #f5f5f5;
+}
+
+.results__list {
+  padding: 0;
+  list-style: none;
+  width: 70%;
+  margin: 0 auto;
+  color: #f5f5f5;
+  position: relative;
+}
+.results__item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 19.4300518135vw;
+  background-color: #364f6b;
+  border-radius: 1.2953367876vw;
+  margin: 1.2953367876vw 0;
+}
+.results__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 30%;
+}
+.results__owner-img img {
+  width: 12.9533678756vw;
+  height: 12.9533678756vw;
+  border-radius: 100%;
+}
+.results__watcher {
+  position: relative;
+}
+.results__watcher::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -1.2953367876vw;
+  transform: translate(-50%, -25%);
+  background-image: url("/imgs/star-svgrepo-com.svg");
+  background-size: contain;
+  width: 1.6191709845vw;
+  height: 1.6191709845vw;
+  z-index: 20;
+}
+.results__right {
+  height: 100%;
+  flex: 0 0 70%;
+  align-self: flex-start;
+  padding: 1.2953367876vw 0vw;
+}
+.results__owner-name {
+  text-decoration: none;
+  color: #fc5185;
+  text-transform: uppercase;
+  font-size: 1.6191709845vw;
+  line-height: 2.914507772vw;
+}
+.results__repo-name {
+  color: #3fc1c9;
+  text-transform: uppercase;
+  font-size: 1.2953367876vw;
+  line-height: 1.9430051813vw;
+}
+.results__topics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.results__topics * {
+  margin: 0.3238341969vw 0.3238341969vw 0.3238341969vw 0;
+  padding: 0.3238341969vw;
+}
+.results__topics code {
+  background-color: #cfc9c9;
+  border-radius: 0.3238341969vw;
+  color: #364f6b;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 2.5906735751vw;
+}

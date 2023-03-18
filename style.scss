@@ -1,0 +1,146 @@
+@function vw($px-vw, $base-vw: 1544px) {
+    @return ($px-vw * 100vw) / $base-vw;
+}
+* {
+    margin: 0;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: vw(16px);
+    background-color: #fc5185;
+}
+$main-bg: #364f6b;
+$head-text: #3fc1c9;
+$main-text: #f5f5f5;
+$boder-color: #fc5185;
+.form {
+    width: 100%;
+    height: 60vh;
+    background-color: $main-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        color: $head-text;
+        font-size: vw(70px);
+        margin-bottom: vw(40px);
+    }
+    &__search-container {
+        display: flex;
+        align-items: center;
+    }
+    &__search {
+        box-sizing: border-box;
+        width: vw(400px);
+        height: vw(40px);
+        font-size: vw(20px);
+        padding-left: vw(30px);
+        border: none;
+        outline: none;
+        background-color: $main-text;
+    }
+    &__btn {
+        box-sizing: border-box;
+        height: vw(40px);
+        border: none;
+        outline: none;
+        padding: 0 vw(20px);
+        font-size: vw(16px);
+        background-color: $boder-color;
+        color: $main-text;
+    }
+}
+.results {
+    &__list {
+        padding: 0;
+        list-style: none;
+        width: 70%;
+        margin: 0 auto;
+        color: $main-text;
+        position: relative;
+    }
+    &__item {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        min-height: vw(300px);
+        background-color: $main-bg;
+        border-radius: vw(20px);
+        margin: vw(20px) 0;
+    }
+    &__left {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 30%;
+    }
+    &__owner-img {
+        img {
+            width: vw(200px);
+            height: vw(200px);
+            border-radius: 100%;
+        }
+    }
+    &__watcher {
+        position: relative;
+    }
+    &__watcher::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: vw(-20px);
+        transform: translate(-50%, -25%);
+        background-image: url("/imgs/star-svgrepo-com.svg");
+        background-size: contain;
+        width: vw(25px);
+        height: vw(25px);
+        z-index: 20;
+    }
+    &__right {
+        height: 100%;
+        flex: 0 0 70%;
+        align-self: flex-start;
+        padding: vw(20px) vw(0px);
+    }
+    &__owner-name {
+        text-decoration: none;
+        color: $boder-color;
+        text-transform: uppercase;
+        font-size: vw(25px);
+        line-height: vw(45px);
+    }
+    &__repo-name {
+        color: $head-text;
+        text-transform: uppercase;
+        font-size: vw(20px);
+        line-height: vw(30px);
+    }
+    &__stars {
+    }
+    &__topics {
+        display: flex;
+        flex-wrap: wrap;
+        * {
+            margin: vw(5px) vw(5px) vw(5px) 0;
+            padding: vw(5px);
+        }
+        code {
+            background-color: #cfc9c9;  
+            border-radius: vw(5px);
+            color: $main-bg;
+        }
+    }
+}
+.topics {
+}
+.error {
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,50%);
+    font-size: vw(40px);
+}
